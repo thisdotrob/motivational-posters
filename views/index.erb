@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
   <link href="/css/application.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
   <script src="/javascript/support.js"></script>
@@ -18,7 +27,7 @@
       <input id="search-term" type="text">
       <button id="go-search">Go!</button>
       <div id="search-results"></div>
-      <div id="branding"></div>
+      <div id="branding"></div> 
   </section>
   <section id="add-text">
     <h2>Step 2. Add Text</h2>
@@ -182,19 +191,23 @@
                 <option>right</option>
               </select>
     </div>
-    <div id ="twitter">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-text="I built a 'Motivational Posters' page today here on my way in to work (@makersacademy)!">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <div id ="social-media">
+        <p><a href="https://twitter.com/share" class="twitter-share-button" data-text="I built a 'Motivational Posters' page today here on my way in to work (@makersacademy)!">Tweet</a></p>
+      <p><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <div class="fb-like" data-href="https://tranquil-headland-1656.herokuapp.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div></p>
     </div>
   </section>
 </body>
 <footer>
   <a href="http://www.makersacademy.com/"><img src="http://rosshepburn.com/blog/makers/wp-content/uploads/2014/03/Makers_Academy_Logo1.png"></a>
   <div>
-    I built this page during the precourse phase for <a href="http://makersacademy.com/">Makers Academy</a>, a highly selective 12 week coding course in London
+    I built this page during the precourse phase for <a href="http://makersacademy.com/">Makers Academy</a>, a highly selective 12 week coding course in London.
   </div>
   <div>
-    This page uses Google Image search, Ruby, Sinatra, Javascript, jQuery, HTML and CSS.
+    This page uses <a href="https://images.google.co.uk/">Google Image search</a>, <a href="https://www.ruby-lang.org/">Ruby</a>, <a href="http://www.sinatrarb.com/">Sinatra</a>, <a href="https://www.javascript.com/">Javascript</a>, <a href="https://jquery.com/">jQuery</a>, <a href="http://www.w3.org/html/">HTML</a> and <a href="http://www.w3.org/Style/CSS/">CSS</a>.
+  </div>
+  <div>
+    Built by Rob Stevenson.
   </div>
 </footer>
 </html>
