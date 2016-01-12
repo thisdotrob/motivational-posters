@@ -1,6 +1,6 @@
 google.load("search", "1");
 
-function findImagesOnGoogle(options) {  
+function findImagesOnGoogle(options) {
   $(options.container).empty();
   $(options.container).append($("<p>").text("Searching..."));
 
@@ -9,7 +9,7 @@ function findImagesOnGoogle(options) {
     google.search.Search.getBranding('branding');
     $(options.container).empty();
     for (var i = 0; i < imageSearch.results.length; i++) {
-      var result = imageSearch.results[i];      
+      var result = imageSearch.results[i];
       var img = $("<img>");
       img.attr('src', result.tbUrl);
       img.data('url', result.url);
@@ -17,7 +17,7 @@ function findImagesOnGoogle(options) {
     }
   }, null);
   imageSearch.setResultSetSize(8);
-  imageSearch.execute(options.keywords);  
+  imageSearch.execute(options.keywords);
 }
 
 function saveParametersToHash() {
@@ -34,10 +34,10 @@ function saveParametersToHash() {
     hash.keyword = $('#search-term').val();
     window.location.hash = escape(JSON.stringify(hash));
     updateTweetButton();
-  });  
+  });
 }
 
-function loadParametersFromHash() {  
+function loadParametersFromHash() {
   try {
     var hash = JSON.parse(unescape(window.location.hash).replace('#', ''));
     $('#text').val(hash.caption);
@@ -53,7 +53,7 @@ function loadParametersFromHash() {
   } catch (err) {}
 }
 
-function updateTweetButton() {    
+function updateTweetButton() {
   if (typeof twttr == 'undefined') {
     return;
   }
@@ -70,6 +70,6 @@ function updateTweetButton() {
 
 $(function() {
   loadParametersFromHash();
-  saveParametersToHash();  
+  saveParametersToHash();
   $('#text').trigger("input");
 })
